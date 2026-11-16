@@ -1,0 +1,483 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    height: 100%;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0.5rem;
+    width: 80%;
+    height: 8rem;
+    border-radius: 0.4rem;
+    background-image: linear-gradient(to right, var(--color), var(--color), var(--color2));
+
+    img{
+        width: 8.5rem;
+        margin-bottom: -2.5rem;
+    }
+
+    p{
+        font-family: var(--font-family);
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+    }
+    
+}
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 81vh;
+}
+
+.apresentacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+
+    h2{
+        font-family: var(--font-family);
+        color: var(--color);
+        font-weight: 400;
+        letter-spacing: 0.3rem;
+    }
+
+    p{
+        font-family: var(--font-family);
+        color: var(--color3);
+        font-weight: 200;
+        margin-top: -1.5rem;
+    }
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 105rem;
+    height: 60vh;
+    padding: 1rem 3.5rem;
+    background-color: var(--color);
+    border-radius: 0.4rem;
+}
+
+.dados-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 10rem;
+
+}
+
+.campos-form{
+    display: grid;
+    grid: 1fr;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+
+    label{
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-weight: 300;
+        color: var(--color2);
+    }
+
+    input{
+        width: 40rem;
+        height: 2rem;
+        border-radius: 0.3rem;
+        border: 0.1rem solid var(--border);
+        padding: 0.4rem;
+        font-family: var(--font-family);
+    }
+
+    select{
+        width: 40rem;
+        height: 2rem;
+        border-radius: 0.3rem;
+        border: 0.1rem solid var(--border);
+        padding: 0.2rem;
+        font-family: var(--font-family);
+    }
+
+    span{
+        color: brown;
+        font-family: var(--font-family);
+    }
+
+    small{
+        font-family: var(--font-family);
+        font-size: 0.5rem;
+    }
+
+    option{
+        font-family: var(--font-family);
+        background-color: var(--bg3);
+    }
+}
+
+.dados-checkbox{
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    margin-top: 1rem;
+
+    label{
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-weight: 300;
+        color: var(--color2);
+    }
+
+    span{
+        color: brown;
+        font-family: var(--font-family);
+    }
+
+    small{
+        font-family: var(--font-family);
+        font-size: 0.5rem;
+    }
+}
+
+.dados-checkbox-campos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.65rem;
+  background-color: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+  margin-top: 0.5rem;
+
+  span{
+    font-family: var(--font-family);
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--color2);
+    text-transform: capitalize;
+  }
+
+}
+
+.dados-checkbox-campos-estrangerio input[type="checkbox"] {
+  width: 1.1rem;
+  height: 0.9rem;
+  min-width: 1.1rem;
+  accent-color: var(--color);
+  cursor: pointer;
+  flex-shrink: 0;  
+}
+
+.etapa[hidden] {
+    display: none;
+}
+
+.etapa.ativa {
+    display: block;
+}
+
+.etapa{
+
+    h2{
+        font-family: var(--font-family);
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--color2);
+    }
+
+    button{
+        margin-top: 1rem;
+        width: 12rem;
+        height: 2rem;
+        font-family: var(--font-family);
+        border-radius: 0.3rem;
+        background-color: var(--button2);
+        color: var(--color);
+        border: none;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+}
+
+.etapa button:hover{
+    transition: all 0.5s;
+    background-color: transparent;
+    border: solid 0.1rem var(--border);
+    color: var(--color2);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    background-color: var(--bg);
+    width: 80%;
+    margin: auto;
+
+}
+
+.dados-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+
+    p{
+        font-family: var(--font-family);
+        color: var(--color);
+        font-size: 0.6rem;
+    }
+
+    img{
+        width: 5rem;
+    }
+}
+
+
+
+
+/* --- Layout pra celular ---*/
+
+@media screen and (max-width: 600px) {
+
+    
+   header {
+        width: 95%;
+        gap: 1.5rem;
+        padding: 0.75rem;
+        height: 8rem;
+
+        h1 {
+            text-align: center;
+            font-size: 0.5rem;
+        }
+
+        img {
+            width: 10rem;
+        }
+    }
+
+
+    .apresentacao {
+        width: 95%;
+        text-align: center;
+
+        h2 {
+            letter-spacing: 0.15rem;
+            font-size: 0.9rem;
+        }   
+
+        p {
+        margin-top: -0.5rem;
+        text-align: center;
+        font-size: 0.7rem;
+        }
+    }
+
+    main {
+        height: auto;
+        min-height: 81vh;
+    }
+
+    form {
+        width: 95%;
+        height: auto;
+        min-height: 60vh;
+        padding: 1rem;
+    }
+
+    .dados-form {
+        display: grid;
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .campos-form {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .campos-form input,
+    .campos-form select {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+
+    .dados-checkbox {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .dados-checkbox-campos {
+        width: 100%;
+        min-width: 0;
+
+    label {
+        max-width: 100%;
+        }
+    }
+
+    .etapa {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+
+    h2 {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        }
+    
+    button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    }
+
+    
+    footer {
+        width: 95%;
+        height: auto;
+        padding: 0.75rem 0;
+    }
+
+    .dados-footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+}
+
+
+/* --- Layout pra celular --- */
+
+@media screen and (max-width: 380px) {
+
+    header {
+        width: 96%;
+        padding: 0.75rem;
+        
+
+    }
+
+    .principal {
+        width: 100%;
+    }
+
+    form {
+        width: 96%;
+        padding: 0.75rem;
+    }
+
+    .campos-form input,
+    .campos-form select {
+        width: 100%;
+    }
+
+    .dados-checkbox,
+    .dados-checkbox-campos {
+        padding: 0.75rem 0.4rem;
+    }
+
+    .etapa button {
+        width: 100%;
+    }
+
+    footer {
+        width: 96%;
+    }
+
+}
+
+
+/* --- Adaptação dos inputs ---*/
+
+@media screen and (max-width: 600px) {
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        height: 5rem;
+        
+        img{
+            width: 4.5rem;
+        }
+
+        p{
+            font-size: 0.5rem;
+        }
+
+
+    }
+    .apresentacao{
+        h2{
+            font-size: 0.9rem;
+            letter-spacing: 0.1rem;
+        }
+    }
+
+    #formulario {
+        h2{
+            font-size: 0.8rem;
+        }
+    }
+
+    .dados-form {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .campos-form {
+        display: grid;
+        width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
+        justify-self: stretch;
+
+        label{
+            font-size: 0.8rem;
+        }
+    }
+
+    .campos-form input:not([type="checkbox"]):not([type="radio"]),
+    .campos-form select {
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+    }
+
+    .dados-checkbox{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

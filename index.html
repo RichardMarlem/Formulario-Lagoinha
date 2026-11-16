@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/6621c552df.js" crossorigin="anonymous"></script>
+    <title>Formulário</title>
+</head>
+<body>
+    <header>
+            <a href="/index.html"><img src="/assets/img/logo.png" alt="logo igreja lagoinha"></a>
+            <p>Matriz</p>
+    </header>
+    <main>
+        <section class="apresentacao">
+            <h2>Seja bem-vindo(a) à Lagoinha Matriz</h2>
+            <p>Preencha os campos abaixo para nos conhecermos melhor.</p>
+        </section>
+
+        
+            <form id="formulario">
+                <div class="etapa ativa" id="etapa1">
+                  <h2>1. <i class="fa-solid fa-address-card"></i> DADOS PESSOAIS </h2>
+                  
+                    <div class="dados-form">
+                        <div class="campos-form">
+                            <label for="nomeCompleto">Nome<span>*<small>Obrigatório</small></span></label>
+                            <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Richard Marlem Salvador Corrêa" required>
+                        </div>
+
+                        <div class="campos-form">
+                            <label for="celular">Celular<span>*<small>Obrigatório</small></span></label>
+                            <input type="tel" name="celular" id="celular" placeholder="+5531900000000" required>
+                        </div>
+
+                        <div class="campos-form">
+                            <label for="email">Email<span>*<small>Obrigatório</small></span></label>
+                            <input type="email" name="email" id="email" placeholder="meuemail@meuemail.com" required>
+                        </div>
+
+                        <div class="campos-form">
+                            <label for="dataNascimento">Data de Nascimento<span>*<small>Obrigatório</small></span></label>
+                            <input type="date" name="dataNascimento" id="dataNascimento"required>
+                        </div>
+
+                        <div class="campos-form">
+                            <label for="sexo">Sexo<span>*<small>Obrigatório</small></span></label>
+                            <select name="sexo" id="sexo">
+                                <option value="">Selecione</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                            </select>
+                        </div>
+
+                        <div class="campos-form">
+                            <label for="estadoCivil">Estado Civil<span>*<small>Obrigatório</small></span></label>
+                            <select name="estadoCivil" id="estadoCivil">
+                                <option value="">Selecione</option>
+                                <option value="Casado(a)">Casado(a)</option>
+                                <option value="Divorciado(a)">Divorciado(a)</option>
+                                <option value="Solteiro(a)">Solteiro(a)</option>
+                                <option value="Viúvo(a)">Viúvo(a)</option>
+                                <option value="Casado civil">Casado civil</option>
+                                <option value="Casado civil e religioso">Casado civil e religioso</option>
+                                <option value="Mora junto">Mora junto</option>
+                                <option value="União estável">União estável</option>
+                            </select>
+                        </div>
+
+                        <div class="campos-form">
+                            <label for="cidade">Cidade<span>*<small>Obrigatório</small></span></label>
+                            <input type="text" name="cidade" id="cidade" placeholder="Belo Horizonte" required>
+                        </div>
+
+                        <div class="campos-form">
+                            <label for="bairro">Bairro<span>*<small>Obrigatório</small></span></label>
+                            <input type="text" name="bairro" id="bairro" placeholder="Pampulha" required>
+                        </div>
+
+                    </div>
+                    
+                    <button type="button" onclick="proximaEtapa()">Próximo <i class="fa-solid fa-angles-right"></i></button>
+                </div> 
+
+                <!-- Campos da segunda etapa -->
+
+                <div class="etapa" id="etapa2" hidden>
+                  <h2>2. <i class="fa-solid fa-place-of-worship"></i> INFORMAÇÕES CULTO </h2>
+                  
+                    <div class="dados-form">                        
+                        <div class="campos-form">
+                            <label for="cultoAssistido">Qual o Culto assistido?<span>*<small>Obrigatório</small></span></label>
+                            <select name="cultoAssistido" id="cultoAssistido">
+                                <option value="">Selecione</option>
+                                <option value="DOMINGO 9H">DOMINGO 9H</option>
+                                <option value="DOMINGO 11H30">DOMINGO 11H30</option>
+                                <option value="DOMINGO 15H">DOMINGO 15H</option>
+                                <option value="DOMINGO 18H">DOMINGO 18H</option>
+                                <option value="DOMINGO 20H30">DOMINGO 20H30</option>
+                                <option value="SEGUNDA - HOPE">SEGUNDA - HOPE</option>
+                                <option value="TERÇA - FÉ">TERÇA - FÉ</option>
+                                <option value="QUARTA 19H30">QUARTA 19H30</option>
+                                <option value="QUINTA ESCOLA BÍBLICA">QUINTA ESCOLA BÍBLICA</option>
+                                <option value="SEXTA - CAMPUS ON LINE">SEXTA - CAMPUS ONLINE</option>
+                                <option value="SÁBADO LEGACY">SÁBADO LEGACY</option>
+                                <option value="SÁBADO ROCKET">SÁBADO ROCKET</option>
+                                <option value="CULTO HERO">CULTO HERO</option>
+                                <option value="AJUNTAMENTO SHINE">AJUNTAMENTO SHINE</option>
+                                <option value="CULTO CRIE">CULTO CRIE</option>
+                                <option value="CULTO - EPHATÁ">CULTO - EPHATÁ</option>
+                                <option value="CULTO 16H">CULTO 16H</option>
+                                <option value="CULTO TERCEIRA IDADE">CULTO TERCEIRA IDADE</option>
+                                <option value="CULTO EM INGLÊS">CULTO EM INGLÊS</option>
+                                <option value="GC's">GC's</option>
+                                <option value="ASSISTI ON LINE">ASSISTI ON LINE</option>
+                                <option value="OUTRO">OUTRO</option>
+                                <option value=""></option>
+                            </select>
+
+                            <div class="dados-checkbox">
+                            <label for="passosDados">Nos diga, qual passo você deu hoje?<span>*<small>Obrigatório</small></span></label>
+                            <div class="dados-checkbox-campos-estrangerio">
+                                <div class="dados-checkbox-campos">
+                                    <span for="estouVisitando"><input type="checkbox" id="estouVisitando">
+                                        ESTOU VISITANDO
+                                    </span>
+                                    <span for="aceiteiJesusPrimeiraVez"><input type="checkbox" id="aceiteiJesusPrimeiraVez">
+                                        ACEITEI JESUS PELA PEIMEIRA VEZ
+                                    </span>
+                                    <span for="reconciliandoComJesus"><input type="checkbox" id="reconciliandoComJesus">
+                                        ESTOU ME RECONCILIANDO COM JESUS
+                                    </span>
+                                    <span for="queroMeTornarMembro"><input type="checkbox" id="queroMeTornarMembro">
+                                        QUERO ME TORNAR MEMBRO
+                                    </span>
+                                    <span for="desejoParticiparDeUmGc"><input type="checkbox" id="desejoParticiparDeUmGc">
+                                        DESEJO PARTICIPAR DE UM GC
+                                    </span>
+                                    <span for="aconselhamentoPastoral"><input type="checkbox" id="aconselhamentoPastoral">
+                                        ACONSELHAMENTO PASTORAL
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                            
+                            <label for="preenchimentoFeito">Preenchimento feito<span>*<small>Obrigatório</small></span></label>
+                            <select name="preenchimentoFeito" id="preenchimentoFeito" required>
+                                <option value="">Selecione</option>
+                                <option value="PELA PRÓPRIA PESSOA">PELA PRÓPRIA PESSOA</option>
+                                <option value="PELO CONSOLIDADOR/LÍDER">PELO CONSOLIDADOR/LÍDER</option>
+                            </select>
+                        
+                        </div>
+                        
+                    </div>
+                    <button type="button" onclick="voltarEtapa()"><i class="fa-solid fa-angles-left"></i> Anterior </button>
+                    
+                    <button type="submit">Enviar <i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </form>
+        
+    </main>
+    <footer>
+        <div class="dados-footer">
+            <p>Formulário Membros/Visitantes</p>
+            <img src="/assets/img/logo2.png" alt="Logo Igreja">
+            <p>RM @ 2026</p>
+        </div>
+    </footer>
+    <script src="/script/script.js"></script>
+</body>
+
+</html>
